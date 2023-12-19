@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="running">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Fosus Timer 2.0 - Pomodoro</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="assets/FocusTimeFav.svg" type="image/x-icon.svg">
+
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script type="module" src="./src/main.js" defer></script>
+</head>
+<body>
+  <div id="app">
+
+    <div class="time-and-controls">
+
+      <section id="timer">
+  
+        <span id="minutes"></span>
+        <span>:</span>
+        <span id="seconds"></span>
+  
+      </section>
+  
+      <section id="controls">
+  
+        <button
+        data-action="toggleRunning"
+        class="ph ph-play-circle">
+        
+        </button>
+        
+        <button
+        data-action="toggleRunning"
+        class="ph ph-pause-circle">
+          
+        </button>
+  
+        <button
+        data-action="stop"
+        class="ph ph-stop-circle">
+          
+        </button>
+  
+        <button
+        data-action="increase"
+        class="ph ph-plus-circle">
+          
+        </button>
+  
+        <button
+        data-action="decrement"
+        class="ph ph-minus-circle">
+          
+        </button>
+  
+      </section>
+
+    </div>
+
+
+    <section id="background">
+
+      <button
+        data-background="forest"
+        id="forest"
+        class="ph ph-tree">
+        
+      </button>
+      
+      <button
+        data-background="rain"
+        id="rain"
+        class="ph ph-cloud-snow">
+        
+      </button>
+      
+      <button
+        data-background="coffee"
+        id="coffee"
+        class="ph ph-storefront">
+        
+      </button>
+      
+      <button
+        data-background="fireplace"
+        id="fireplace"
+        class="ph ph-fire">
+        
+      </button>
+      
+
+    </section>
+
+  </div>
+</body>
+</html>
