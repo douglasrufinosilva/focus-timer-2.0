@@ -26,10 +26,6 @@ function decrement() {
 }
 
 function forest() {
-  state.isMute = document.documentElement.classList.toggle('forest')
-
-  state.isMute ? sounds.forest.play() : sounds.forest.pause()
-  
   document.documentElement.classList.toggle('forest-on')
   document.documentElement.classList.remove('rain-on')
   document.documentElement.classList.remove('coffee-on')
@@ -37,10 +33,6 @@ function forest() {
 }
 
 function rain() {
-  state.isMute = document.documentElement.classList.toggle('rain')
-
-  state.isMute ? sounds.rain.play() : sounds.rain.pause()
-  
   document.documentElement.classList.toggle('rain-on')
   document.documentElement.classList.remove('forest-on')
   document.documentElement.classList.remove('coffee-on')
@@ -48,10 +40,6 @@ function rain() {
 }
 
 function coffee() {
-  state.isMute = document.documentElement.classList.toggle('coffee')
-
-  state.isMute ? sounds.coffee.play() : sounds.coffee.pause()
-  
   document.documentElement.classList.toggle('coffee-on')
   document.documentElement.classList.remove('rain-on')
   document.documentElement.classList.remove('forest-on')
@@ -59,10 +47,6 @@ function coffee() {
 }
 
 function fireplace() {
-  state.isMute = document.documentElement.classList.toggle('fireplace')
-
-  state.isMute ? sounds.fireplace.play() : sounds.fireplace.pause()
-  
   document.documentElement.classList.toggle('fireplace-on')
   document.documentElement.classList.remove('rain-on')
   document.documentElement.classList.remove('coffee-on')

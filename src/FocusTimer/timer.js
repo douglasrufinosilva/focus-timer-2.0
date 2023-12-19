@@ -42,15 +42,18 @@ function updateDisplay(minutes, seconds) {
 }
 
 function add5Minutes() {
+  if(elements.minutes.textContent >= 60) {
+    elements.minutes.textContent = 60 - 5
+  }
   let minutes = Number(elements.minutes.textContent)
-  elements.minutes.textContent = String(minutes + 5)
+  elements.minutes.textContent = String(minutes + 5).padStart(2, '0')
 }
 
 function remove5Minutes() {
 
-  if(elements.minutes > 5) {
+  if(elements.minutes.textContent > 5) {
     let minutes = Number(elements.minutes.textContent)
-    elements.minutes.textContent = String(minutes - 5)
+    elements.minutes.textContent = String(minutes - 5).padStart(2, '0')
   } else {
     let minutes = Number(elements.minutes.textContent)
     elements.minutes.textContent = String(minutes - minutes).padStart(2, '0')

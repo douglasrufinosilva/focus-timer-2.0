@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="running">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +11,7 @@
 
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <script type="module" src="./src/main.js" defer></script>
+  <script src="src/FocusTimer/playStopMusic.js" defer></script>
 </head>
 <body>
   <div id="app">
@@ -67,6 +68,7 @@
       <button
         data-background="forest"
         id="forest"
+        onclick="playMusic('./assets/Floresta.wav')"
         class="ph ph-tree">
         
       </button>
@@ -74,6 +76,7 @@
       <button
         data-background="rain"
         id="rain"
+        onclick="playMusic('./assets/Chuva.wav')"
         class="ph ph-cloud-snow">
         
       </button>
@@ -81,6 +84,7 @@
       <button
         data-background="coffee"
         id="coffee"
+        onclick="playMusic('./assets/Cafeteria.wav')"
         class="ph ph-storefront">
         
       </button>
@@ -88,6 +92,7 @@
       <button
         data-background="fireplace"
         id="fireplace"
+        onclick="playMusic('./assets/Lareira.wav')"
         class="ph ph-fire">
         
       </button>
