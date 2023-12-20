@@ -1,24 +1,34 @@
 let audioPlayer = new Audio();
 let currentPlayingButton = null;
 
-function playMusic(source) {
-    // Verifique se há uma música em reprodução
-    if (currentPlayingButton !== null) {
-        stopMusic();
+function toggleMusic(source, button) {
+    // Verifica se o botão clicado é o mesmo que está atualmente tocando a música
+    if (button === currentPlayingButton) {
+        // Se sim, pausa a música
+        if (!audioPlayer.paused) {
+            audioPlayer.pause();
+        } else {
+            // Se estiver pausada, retoma
+            audioPlayer.play();
+        }
+    } else {
+        // Se o botão for diferente, para a música anterior e inicia a nova
+        if (currentPlayingButton !== null) {
+            stopMusic();
+        }
+
+        audioPlayer.src = source;
+        audioPlayer.play();
+
+        // Atualiza o botão atualmente tocando
+        currentPlayingButton = button;
     }
-
-    // Inicie a nova música
-    audioPlayer.src = source;
-    audioPlayer.play();
-
-    // Atualize o botão atualmente tocando
-    currentPlayingButton = this;
 }
 
 function stopMusic() {
     audioPlayer.pause();
     audioPlayer.currentTime = 0;
 
-    // Limpe a referência do botão tocando
+    // Limpa a referência do botão tocando
     currentPlayingButton = null;
 }
